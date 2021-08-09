@@ -12,6 +12,9 @@ public class HelloWorld {
        System.out.println((myString));
 
 
+//       Add string line
+        myString = "Goodbye all";
+        System.out.println(myString);
 
     }
 
