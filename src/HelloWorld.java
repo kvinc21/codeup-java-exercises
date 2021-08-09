@@ -16,6 +16,26 @@ public class HelloWorld {
         myString = "Goodbye all";
         System.out.println(myString);
 
+        myString = "3.14159";
+        System.out.println(myString);
+
+        long myNumber;
+
+//        myNumber = 3.14;
+//        myNumber = 123L;
+        myNumber = 123;
+        System.out.println(myNumber);
+
+//       int x = 5;
+//       System.out.println(x++);
+//       System.out.println(x);
+
+       int x = 5;
+       System.out.println(++x);
+       System.out.println(x);
+
+
+
     }
 
 
