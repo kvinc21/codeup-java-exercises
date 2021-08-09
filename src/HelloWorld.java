@@ -6,6 +6,13 @@ public class HelloWorld {
        int myFavoriteNumber;
        myFavoriteNumber = 21;
        System.out.println(myFavoriteNumber);
+
+       String myString;
+       myString = "Hey all";
+       System.out.println((myString));
+
+
+
     }
 
 
