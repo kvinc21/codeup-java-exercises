@@ -7,6 +7,7 @@ public class ConsoleExercises {
         double pi = 3.14159;
         System.out.format("The value of pi is approximately, %.2f", pi);
 
+
         Scanner scanner = new Scanner(System.in);
 
 
