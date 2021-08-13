@@ -12,7 +12,7 @@ public class ArraysExercises {
         
         people[0] = new Person["Ken"];
         people[1] = new Person["Kenny"];
-        people[2] = new Person["Kenn"];
+        people[2] = new Person["Ken"];
 
         for (int i = 0; i < ; i++) {
             
