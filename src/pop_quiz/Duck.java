@@ -1,8 +1,7 @@
 package pop_quiz;
 
-public class Duck package pop_quiz;
-
 public class Duck {
+
 
     private  String name;
     private int age;
@@ -10,7 +9,7 @@ public class Duck {
     public Duck(String name, int age) {
 
         if (name == null){
-            throw new IllegalArgumentException()
+            throw new IllegalArgumentException();
         }
         this.name = name;
         this.age = age;
