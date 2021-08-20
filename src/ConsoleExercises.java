@@ -26,6 +26,18 @@ public class ConsoleExercises {
         String userSentence = scanner.nextLine();
         System.out.println(userSentence);
 
+        System.out.println("Enter the length value of your classroom: ");
+        double length = Double.parseDouble(scanner.nextLine());
+
+        System.out.println("Enter the length and width values of your classroom: ");
+        double width = Double.parseDouble(scanner.nextLine());
+
+        double area = length * width;
+        double perimeter = (length * 2) + (length * 2);
+
+        System.out.println("The Area of the classroom is: " + area);
+        System.out.println("Perimeter: " + perimeter);
+
 
 
 
