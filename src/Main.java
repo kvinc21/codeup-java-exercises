@@ -1,0 +1,13 @@
+public class string {
+    String[] names = {"Rick", "Stacey", "Brad", "Becca"};
+    String x;
+try {
+        x = names[100];
+    } catch (ArrayIndexOutOfBoundsException e) {
+        System.out.println("Exception caught!");
+        x = "";
+    } catch (Exception e) {
+        e.printStackTrace();
+    } finally {
+        System.out.println("This will always run.");
+    }

@@ -8,15 +8,15 @@ public class ArraysExercises {
         System.out.println(Arrays.toString(numbers));
         
         
-        Person[] people = new Person[3]; 
-        
-        people[0] = new Person["Ken"];
-        people[1] = new Person["Kenny"];
-        people[2] = new Person["Ken"];
-
-        for (int i = 0; i < ; i++) {
-            
-        }
+//        Person[] people = new Person[3];
+//
+//        people[0] = new Person["Ken"];
+//        people[1] = new Person["Kenny"];
+//        people[2] = new Person["Ken"];
+//
+//        for (int i = 0; i < 2; i++) {
+//
+//        }
     }
 }
 
