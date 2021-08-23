@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import java.util.Scanner;
 
 public class ConsoleExercises {
@@ -47,3 +48,5 @@ public class ConsoleExercises {
 
     }
 }
+=======
+>>>>>>> 5a3b8a341b5d158634e98155c03ffe227536e63a
