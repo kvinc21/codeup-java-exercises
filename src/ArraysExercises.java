@@ -1,3 +1,5 @@
+import person.Person;
+
 import java.util.Arrays;
 
 public class ArraysExercises {
@@ -13,20 +15,18 @@ public class ArraysExercises {
         people[1] = new Person ("Steve");
         people[2] = new Person ("Travis");
 
-//        for (int i = 0; i < people.length; i++) {
-//            System.out.println(people[i].getName());
-//        }
-//
+      for (Person person : people) {
+                System.out.println(person.getName());
+            }
+
         people = addPerson(people, new Person("Joy"));
             System.out.println("With added Person");
 
-            for (Person person : people) {
-                System.out.println(person.getName());
-            }
+            
     }
 
         public static Person[] addPerson(Person[] person, Person personToAdd) {
-            Person[] newPeopleArray = Arrays.copyof(person, person.length + 1);
+            Person[] newPeopleArray = Arrays.copyOf(person, person.length + 1);
             newPeopleArray[newPeopleArray.length -1] = personToAdd;
                 return newPeopleArray;
         }
