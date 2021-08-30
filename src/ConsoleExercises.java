@@ -1,4 +1,7 @@
+
 import java.util.Scanner;
+
+
 
 public class ConsoleExercises {
     public static void main(String[] args) {
@@ -33,17 +36,10 @@ public class ConsoleExercises {
         double width = Double.parseDouble(scanner.nextLine());
 
         double area = length * width;
-        double perimeter = (length * 2) + (length * 2);
+        double perimeter = (width * 2) + (length * 2);
 
         System.out.println("The Area of the classroom is: " + area);
         System.out.println("Perimeter: " + perimeter);
-
-
-
-
-
-
-
-
     }
 }
+

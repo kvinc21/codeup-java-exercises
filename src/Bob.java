@@ -1,10 +1,11 @@
 import java.util.Scanner;
+
 public class Bob {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Say something to Bob ");
-        Boolean continueOn = true;
+        boolean continueOn = true;
         do {
             String userResponse = scanner.nextLine();
             if (userResponse.endsWith("?")) {
