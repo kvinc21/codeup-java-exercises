@@ -43,6 +43,9 @@ public class Input {
 
     }
 
+    public double getDouble() {
+        return 0;
+    }
 }
 
 //String getString()
