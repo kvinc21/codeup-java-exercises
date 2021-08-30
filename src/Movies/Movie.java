@@ -2,6 +2,7 @@ package Movies;
 
 public class Movie {
 
+    public Object getCategory;
     private String name;
     private String category;
 
@@ -23,7 +24,7 @@ public class Movie {
         return category;
     }
 
-    public void SetCategory(String category){
+    public void setCategory(String category){
         this.category = category;
     }
 }
