@@ -1,5 +1,7 @@
 package Movies;
 
+import java.io.Serializable;
+
 public class Movie {
 
     public Object getCategory;
