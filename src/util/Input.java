@@ -1,12 +1,12 @@
 package util;
+import java.util.Scanner;
 
 //
-import java.util.Scanner;
 
 
 public class Input {
 
-    private Scanner scanner;
+    private final Scanner scanner;
 
     public Input() {
         this.scanner = new Scanner(System.in);
@@ -28,7 +28,7 @@ public class Input {
         int userInt;
 
         try {
-            userInt = Integer.valueOf(this.getString());
+            userInt = Integer.parseInt(this.getString());
         } catch (NumberFormatException e) {
             System.out.println("This is not an integer!");
             return getInt(min, max);
