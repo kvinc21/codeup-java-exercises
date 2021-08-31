@@ -6,87 +6,66 @@ import java.lang.String;
 import java.lang.System;
 
 public class MoviesApplication {
+    static Input input = new Input();
+    static Movie[] movies = MoviesArray.findAll();
 
     public static void main(String[] args) {
-        boolean running = true;
-        while (running) {
-            System.out.println(menuDisplay());
-            int response = userAnswer();
-            running = userChoice(response);
-        }
-    }
+        boolean continueOn = true;
 
-    private static int userChoice(int choice) {
-        boolean continueRunning = true;
+        System.err.println("Movie decisions");
+        do {
+            System.out.println("What would you like to do?\n" +
 
-        switch (choice) {
-            System.out.println(menuDisplay());
-            switch (choice) {
+                    "0 - exit\n" +
+                    "1 - view all movies\n" +
+                    "2 - view movies in the animated category\n" +
+                    " 3 - view movies in the drama category\n" +
+                    "4 - view movies in the horror category\n" +
+                    "5 - view movies in the scifi category");
+
+            int userResponse = input.getInt(0, 5);
+
+            switch (userResponse) {
                 case 0:
                     System.out.println("Good bye!");
-                    continueRunning = false;
                     break;
-                case 1: // VIEW ALL MOVIES
-                    for (Movie movie : MoviesArray.findAll()) {
+                case 1:
+                    for (Movie movie : movies) {
                         System.out.printf("%s -- %s\n", movie.getName(), movie.getCategory());
                     }
                     break;
                 case 2:
-                    System.out.println();
-                    viewMoviesByCategory("animated");
-                    System.out.println();
+                    for (Movie movie : movies) {
+                        if (movie.getCategory().equals("animated")) {
+                            System.out.printf("%s -- %s\n", movie.getName(), movie.getCategory());
+                        }
+                    }
                     break;
                 case 3:
-                    System.out.println();
-                    viewMoviesByCategory("drama");
-                    System.out.println();
+                    for (Movie movie : movies)
+                        if (movie.getCategory().equals("drama")) {
+                            System.out.printf("%s -- %s\n", movie.getName(), movie.getCategory());
+                        }
                     break;
                 case 4:
-                    System.out.println();
-                    viewMoviesByCategory("horror");
-                    System.out.println();
-                    break;
-                case 5:
-                    System.out.println();
-                    viewMoviesByCategory("scifi");
-                    System.out.println();
-                    break;
-            }
-            return running;
-        }
-
-
-        private static void viewMoviesByCategory( String category){
-            for (Movie movie : MoviesArray.findAll()) {
-                if (movie.getCategory().equalsIgnoreCase(category)) {
-                    System.out.printf("%s - %s\n", movie.getName(), movie.getCategory());
-                }
-            }
-        }
-
-        private static int promptUserAnswer () {
-            Input input = new Input();
-            System.out.println("Enter choice: ");
-            int userAnswer = input.getInt(2, 4);
-            return userAnswer;
-        }
-
+                    for (Movie movie : movies) {
+                        if (movie.getCategory().equals("horror")) {
+                            System.out.printf("%s -- %s\n", movie.getName(), movie.getCategory());
+                        }
+                    }
+                        break;
+                        case 5:
+                            for (Movie movie : movies) {
+                                if (movie.getCategory().equals("scifi")) {
+                                    System.out.printf("%s -- %s\n", movie.getName(), movie.getCategory());
+                                }
+                            }
+                            break;
+                default:
+                            System.err.println("The end");
+                    }
+                    System.out.println("Continue?");
+                    continueOn = input.yesNo();
+        } while (continueOn);
     }
-
-    private static void viewMoviesByCategory(String animated) {
-    }
-
-
-    private static String menuDisplay() {
-
-        return "What would you like to do?\n" +
-                "\n" +
-                "0 - exit\n" +
-                "1 - view all movies\n" +
-                "2 - view movies in the animated category\n" +
-                " 3 - view movies in the drama category\n" +
-                "4 - view movies in the horror category\n" +
-                "5 - view movies in the scifi category";
-    }
-}
 }

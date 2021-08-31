@@ -1,14 +1,14 @@
 package Movies;
 
 import java.io.Serializable;
+import java.lang.String;
 
 public class Movie {
 
-    public Object getCategory;
     private String name;
     private String category;
 
-    public Movie(String name, String category){
+    public Movie(String name, String category) {
         this.name = name;
         this.category = category;
 
