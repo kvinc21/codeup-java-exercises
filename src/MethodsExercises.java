@@ -30,10 +30,10 @@ public class MethodsExercises {
 //        System.out.println(Division(45, 3));
 //        System.out.println(Modulus(45, 30));
 //        int userResponse = getInteger(1, 10);
-        System.out.println(getFactorial());
+//        System.out.println(getFactorial());
+        System.out.println(diceRoll());
     }
 
-    ;
 
     public static int getInteger(int min, int max) {
         Scanner scan = new Scanner(System.in);
@@ -83,7 +83,7 @@ public class MethodsExercises {
         return (int) ((Math.random() * (max - min)) + min);
     }
 
-    public static void diceRoll() {
+    public static boolean diceRoll() {
         Scanner scan = new Scanner(System.in);
         int numberOfSides = getInteger(2, 24);
 
@@ -96,6 +96,8 @@ public class MethodsExercises {
             System.out.println("You rolled " + firstRoll + secondRoll);
             System.out.println("Do you wish to continue? ");
         } while (scan.next().equals("y"));
+        diceRoll();
+        return false;
     }
 }
 
