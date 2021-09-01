@@ -24,13 +24,13 @@ public class MethodsExercises {
     }
 
     public static void main(String[] args) {
-//        System.out.println(Addition(5, 10));
-//        System.out.println(Subtraction(35, 20));
-//        System.out.println(Multiplication(5, -3));
-//        System.out.println(Division(45, 3));
-//        System.out.println(Modulus(45, 30));
-//        int userResponse = getInteger(1, 10);
-//        System.out.println(getFactorial());
+        System.out.println(Addition(5, 10));
+        System.out.println(Subtraction(35, 20));
+        System.out.println(Multiplication(5, -3));
+        System.out.println(Division(45, 3));
+        System.out.println(Modulus(45, 30));
+        int userResponse = getInteger(1, 10);
+        System.out.println(getFactorial());
         System.out.println(diceRoll());
     }
 
@@ -85,7 +85,7 @@ public class MethodsExercises {
 
     public static boolean diceRoll() {
         Scanner scan = new Scanner(System.in);
-        int numberOfSides = getInteger(2, 24);
+        int numberOfSides = getInteger(1, 12);
 
         System.out.println("Roll the dice ");
 
@@ -93,10 +93,10 @@ public class MethodsExercises {
         int secondRoll = getRandomRoll(1, numberOfSides);
 
         do {
-            System.out.println("You rolled " + firstRoll + secondRoll);
-            System.out.println("Do you wish to continue? ");
+            System.out.println("You rolled " + firstRoll);
+            System.out.println("Do you wish to roll again? ");
         } while (scan.next().equals("y"));
-        diceRoll();
+        System.out.println("Your two rolls are: " + firstRoll + secondRoll);
         return false;
     }
 }
